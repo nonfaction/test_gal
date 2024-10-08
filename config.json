@@ -9,5 +9,9 @@
   "theme": "cards",
   "css": "./custom.css",
   "footer": "Copyright Text",
-  "usage-stats": false
+  "usage-stats": false,
+  "include-videos": false,
+  "include-raw-photos": false,
+  "photo-quality":50,
+  "include": ["**/IMG_*"]
 }
