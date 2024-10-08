@@ -24,7 +24,7 @@ jobs:
           sparse-checkout: |
             chbb_photos_orgs
       - run: ls $(pwd)
-      - run: ls ~/
+      - run: ls ~/work
       - name: Checkout 🛎️
         uses:  actions/checkout@v4
         with:
