@@ -16,15 +16,15 @@ jobs:
     if: ${{ github.repository != 'gautamkrishnar/github-pages-gallery' && github.event.head_commit.message != '' && github.event.head_commit.message != 'Initial commit' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses:  actions/checkout@v4
-        with:
-          persist-credentials: false
       - name: Get images
         uses: actions/checkout@v4
         path: ./foo
         with:
          repository: nonfaction/archive_test
+      - name: Checkout 🛎️
+        uses:  actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
