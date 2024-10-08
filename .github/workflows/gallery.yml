@@ -34,7 +34,7 @@ jobs:
       - name: ls my-tools
         run: ls $(pwd)/my-tools
       - name: Package and upload artifact 📦
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: 'my-tools/build_output'
           name: gh-pages
