@@ -1,5 +1,5 @@
 {
-  "input": "chbb_photos_orgs",
+  "input": "test_gal/chbb_photos_orgs",
   "output": "./build_output",
   "title": "Photo Gallery",
   "sort-albums-by": "title",
