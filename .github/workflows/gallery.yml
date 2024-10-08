@@ -23,6 +23,7 @@ jobs:
           #path: destination_folder
           sparse-checkout: |
             chbb_photos_orgs
+      - run: ls $(pwd)
       - name: Checkout 🛎️
         uses:  actions/checkout@v4
         with:
