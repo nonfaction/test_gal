@@ -22,8 +22,7 @@ jobs:
           repository: nonfaction/archive_test
           #path: destination_folder
           sparse-checkout: |
-          chbb_photos_orgs
-          sparse-checkout-cone-mode: false
+            chbb_photos_orgs
       - name: Checkout 🛎️
         uses:  actions/checkout@v4
         with:
