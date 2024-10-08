@@ -16,12 +16,12 @@ jobs:
     if: ${{ github.repository != 'gautamkrishnar/github-pages-gallery' && github.event.head_commit.message != '' && github.event.head_commit.message != 'Initial commit' }}
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout image repo
-      uses: actions/checkout@v4
-      with:
-        repository: nonfaction/archive_test
-        path: img-archive
-    - name: Checkout 🛎️
+      - name: Checkout image repo
+        uses: actions/checkout@v4
+        with:
+          repository: nonfaction/archive_test
+          path: img-archive
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
         with:
           persist-credentials: false
