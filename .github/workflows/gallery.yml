@@ -19,8 +19,8 @@ jobs:
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          #repository: nonfaction/archive_test
-          repository: nonfaction/photo_archive
+          repository: nonfaction/archive_test
+          #repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
       - name: ls my-tools
         run: ls $(pwd)/my-tools
       - name: Package and upload artifact 📦
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: 'my-tools/build_output'
           name: gh-pages
