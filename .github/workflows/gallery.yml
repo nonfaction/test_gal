@@ -33,6 +33,8 @@ jobs:
         with:
           persist-credentials: false
           path: my-tools
+      - run: ls $(pwd)
+      - run: ls ~/work
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
