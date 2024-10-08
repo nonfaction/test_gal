@@ -34,7 +34,7 @@ jobs:
         run: docker run -v "$(pwd)/my-tools:/work" -v "$(pwd)/img-archive:/img-archive" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: ls img-archive
         run: ls $(pwd)/img-archive
-      - name: ls my-tools:
+      - name: ls my-tools
         run: ls $(pwd)/my-tools
       - name: Package and upload artifact 📦
         uses: actions/upload-pages-artifact@v3
