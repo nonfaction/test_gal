@@ -20,6 +20,7 @@ jobs:
         uses:  actions/checkout@v4
         with:
           persist-credentials: false
+          path: my-tools
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
