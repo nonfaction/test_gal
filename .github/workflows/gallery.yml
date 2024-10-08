@@ -19,7 +19,8 @@ jobs:
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          repository: nonfaction/archive_test
+          #repository: nonfaction/archive_test
+          repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
