@@ -38,6 +38,10 @@ jobs:
         with:
           path: 'build_output'
           name: gh-pages
+      - run: ls $(pwd)
+      - run: ls ~/work
+      - run: ls ~/work/test_gal
+      - run: ls ~/work/test_gal/test_gal
       - name: Deploy to Github Pages 🚀
         uses: actions/deploy-pages@v4
         with:
