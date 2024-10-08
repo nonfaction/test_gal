@@ -39,7 +39,7 @@ jobs:
       - name: Package and upload artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build_output'
+          path: 'my-tools/build_output'
           name: gh-pages
       - name: Deploy to Github Pages 🚀
         uses: actions/deploy-pages@v4
