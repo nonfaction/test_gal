@@ -23,6 +23,7 @@ jobs:
           #path: destination_folder
           sparse-checkout: |
             chbb_photos_orgs
+      - run: cp ~/work/test_gal/test_gal/chbb_photos_orgs ~/gal
       - run: ls $(pwd)
       - run: ls ~/work
       - run: ls ~/work/test_gal
