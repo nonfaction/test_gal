@@ -19,7 +19,7 @@ jobs:
       - name: Get images
         uses: actions/checkout@v4
         with:
-         repository: nonfaction/archive_test
+          repository: nonfaction/archive_test
           path: destination_folder
           sparse-checkout: chbb_photos_orgs
           sparse-checkout-cone-mode: false
