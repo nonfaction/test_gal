@@ -19,18 +19,14 @@ jobs:
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          #repository: nonfaction/archive_test
-          repository: nonfaction/photo_archive
+          repository: nonfaction/archive_test
+          #repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
         with:
           persist-credentials: false
           path: my-tools
-      - name: ls pwd
-        run: ls $(pwd)
-        # - name: ls pwd/my-tools
-        #   run: ls $(pwd)/my-tools
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd)/my-tools:/work" -v "$(pwd)/img-archive:/img-archive" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: ls img-archive
