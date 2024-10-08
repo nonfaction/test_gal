@@ -33,6 +33,8 @@ jobs:
         run: ls $(pwd)/img-archive
       - name: ls my-tools
         run: ls $(pwd)/my-tools
+      - name: ls my-tools/build_output
+        run: ls $(pwd)/my-tools/build_output
       - name: Package and upload artifact 📦
         uses: actions/upload-pages-artifact@v3.0.1
         with:
