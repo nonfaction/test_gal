@@ -23,6 +23,8 @@ jobs:
           path: my-tools
       - name: ls pwd
         run: ls $(pwd)
+      - name: ls pwd/my-tools
+        run: ls $(pwd)/my-tools
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
