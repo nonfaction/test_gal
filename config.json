@@ -1,6 +1,6 @@
 {
   "input": "../img-archive/chbb_photos_orgs",
-  "output": "./build_output",
+  "output": "./my-tools/build_output",
   "title": "Photo Gallery",
   "sort-albums-by": "title",
   "sort-media-by": "filename",
