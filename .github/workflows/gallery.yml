@@ -32,12 +32,10 @@ jobs:
         uses:  actions/checkout@v4
         with:
           persist-credentials: false
-          path: ffoo
+          path: my-tools
       - run: ls $(pwd)
-      - run: ls ~/work
-      - run: ls ffoo
       - name: Build Gallery 🔧
-        run: docker run -v "$(pwd)/ffoo:/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
+        run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
