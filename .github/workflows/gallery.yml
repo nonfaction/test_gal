@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: nonfaction/archive_test
-          #path: destination_folder
+          path: dfoo
           sparse-checkout: |
             chbb_photos_orgs
       - run: cp -r ~/work/test_gal/test_gal/chbb_photos_orgs ~/gal
