@@ -22,6 +22,7 @@ jobs:
           persist-credentials: false
       - name: Get images
         uses: actions/checkout@v4
+        path: ./foo
         with:
          repository: nonfaction/archive_test
       - name: Build Gallery 🔧
