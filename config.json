@@ -13,5 +13,7 @@
   "include-videos": false,
   "include-raw-photos": false,
   "photo-quality":50,
-  "include": ["**/IMG_*"]
+  "include": ["**/IMG_*"],
+  "sort-albums-by": "title",
+  "sort-albums-direction": "asc"
 }
