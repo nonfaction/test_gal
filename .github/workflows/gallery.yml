@@ -35,6 +35,7 @@ jobs:
           path: ffoo
       - run: ls $(pwd)
       - run: ls ~/work
+      - run: ls ~/ffoo
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/ffoo" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /ffoo/ && thumbsup --config config.json"
       - name: Package and upload artifact 📦
