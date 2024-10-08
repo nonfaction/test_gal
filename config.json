@@ -1,5 +1,5 @@
 {
-  "input": "./test_gal/test_gal/foo",
+  "input": "./test_gal/foo",
   "output": "./build_output",
   "title": "Photo Gallery",
   "sort-albums-by": "title",
