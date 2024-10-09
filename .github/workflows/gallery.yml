@@ -46,3 +46,12 @@ jobs:
     steps:
         - name: ls
           run: ls
+        - name: Deploy to Github Pages 🚀
+          uses: actions/deploy-pages@v4
+          with:
+            artifact_name: gh-pages
+            token: ${{ secrets.GITHUB_TOKEN }}
+        - name: Delete artifact 🗑️
+          uses: geekyeggo/delete-artifact@v4
+          with:
+            name: gh-pages
