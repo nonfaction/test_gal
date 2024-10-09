@@ -17,11 +17,14 @@ jobs:
     if: ${{ github.repository != 'gautamkrishnar/github-pages-gallery' && github.event.head_commit.message != '' && github.event.head_commit.message != 'Initial commit' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Delete huge unnecessary tools folder
+        run: rm -rf /opt/hostedtoolcache
+        run: rm -rf "$AGENT_TOOLSDIRECTORY"
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          #repository: nonfaction/archive_test
-          repository: nonfaction/photo_archive
+          repository: nonfaction/archive_test
+          #repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
