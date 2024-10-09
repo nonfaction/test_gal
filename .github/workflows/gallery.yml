@@ -18,8 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete huge unnecessary tools folder
-        run: rm -rf /opt/hostedtoolcache
-        run: rm -rf "$AGENT_TOOLSDIRECTORY"
+        run: rm -rf /opt/hostedtoolcache && rm -rf "$AGENT_TOOLSDIRECTORY"
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
