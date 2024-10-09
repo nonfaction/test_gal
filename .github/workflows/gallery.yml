@@ -10,6 +10,7 @@ permissions:
   id-token: write
   actions: write
   pages: write
+  contents: write
 jobs:
   build:
     name: Publish Gallery to Github Pages
