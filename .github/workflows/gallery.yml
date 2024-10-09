@@ -40,3 +40,9 @@ jobs:
         with:
           path: 'my-tools/build_output'
           name: gh-pages
+  foo:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+        -name: ls
+        run: ls
