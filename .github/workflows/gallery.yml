@@ -22,8 +22,8 @@ jobs:
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          #repository: nonfaction/archive_test
-          repository: nonfaction/photo_archive
+          repository: nonfaction/archive_test
+          #repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -32,7 +32,13 @@ jobs:
           path: my-tools
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd)/my-tools:/work" -v "$(pwd)/img-archive:/img-archive" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
-      - name: footer
+      - name: df
+        run: df -h
+      - name: cleanup orgs
+        run: rm -rf img-archive
+      - name: df
+        run: df -h
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
