@@ -45,4 +45,10 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: my-tools/build_output/media/large
+          exclude_assets: 'my-tools/build_output/media/large'
           force_orphan: true
+      - name: Deploy lrg # too large for single commit
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: my-tools/build_output/media/large
