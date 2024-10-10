@@ -24,8 +24,8 @@ jobs:
       - name: Checkout image repo
         uses: actions/checkout@v4
         with:
-          #repository: nonfaction/archive_test
-          repository: nonfaction/photo_archive
+          repository: nonfaction/archive_test
+          #repository: nonfaction/photo_archive
           path: img-archive
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -44,5 +44,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: my-tools/build_output
+          publish_dir: my-tools/build_output/media/large
           force_orphan: true
