@@ -11,7 +11,7 @@
   "footer": "Copyright Text",
   "usage-stats": false,
   "include-videos": false,
-  "include-raw-photos": false,
+  "include-raw-photos": true,
   "photo-quality":50,
   "xinclude": ["**/IMG_*"],
   "sort-albums-by": "title",
